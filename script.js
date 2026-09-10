@@ -1,7 +1,1 @@
-const form = document.getElementById('project-form');
-const note = document.getElementById('form-note');
-
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  note.textContent = 'Merci. Le formulaire est prêt visuellement ; on connectera l’envoi dès que tu me donnes l’adresse de réception.';
-});
+document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('#project-form');if(!form)return;form.addEventListener('submit',e=>{e.preventDefault();const note=document.querySelector('#form-note');note.textContent='Merci. Le formulaire est prêt côté interface ; il reste à connecter l’adresse de réception avant la mise en ligne définitive.';});});
