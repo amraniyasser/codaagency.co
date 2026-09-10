@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Création de sites web au Maroc | Coda Agency</title>
+  <meta name="description" content="Coda Agency crée des sites web au Maroc, pensés pour faire grandir votre entreprise et renforcer votre visibilité en ligne." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://codaagency.co/" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Coda Agency accueil">Coda Agency</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-inner">
+        <p class="eyebrow">Coda Agency</p>
+        <h1>Création de sites web au Maroc</h1>
+        <p class="hero-copy">Des sites web pensés pour faire grandir votre entreprise.</p>
+        <p class="hero-detail">Design, développement et SEO.</p>
+        <a class="cta" href="#contact">Parler de votre projet</a>
+      </div>
+    </section>
+
+    <section class="services section-shell" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>Ce qu’il vous faut pour être visible en ligne.</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-number">01</span>
+          <h3>Création de sites web</h3>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <h3>SEO / GEO / AEO</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <div class="contact-intro">
+        <p class="eyebrow">Votre projet</p>
+        <h2>Parlez-nous de votre projet.</h2>
+      </div>
+
+      <form class="project-form" id="project-form">
+        <div class="field-grid">
+          <label>
+            <span>Nom et prénom</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>De quoi avez-vous besoin ?</legend>
+          <div class="choice-grid">
+            <label class="choice">
+              <input type="radio" name="need" value="Création de site web" required />
+              <span>Création de site web</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="need" value="SEO / GEO / AEO" />
+              <span>SEO / GEO / AEO</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="need" value="Les deux" />
+              <span>Les deux</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label>
+          <span>Détails du projet</span>
+          <textarea name="details" rows="6" required></textarea>
+        </label>
+
+        <button class="cta submit-button" type="submit">Envoyer ma demande</button>
+        <p class="form-note" id="form-note">Formulaire prêt à être connecté à l’adresse de réception.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <span>Coda Agency</span>
+    <span>Création de sites web au Maroc</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
