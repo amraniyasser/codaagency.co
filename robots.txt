@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://codaagency.co/sitemap.xml
+Sitemap: https://amraniyasser.github.io/codaagency.co/sitemap.xml
