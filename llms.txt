@@ -1,19 +1,11 @@
 # Coda Agency
 
-Coda Agency est une agence spécialisée dans la création de sites web au Maroc et la visibilité organique.
+Coda Agency crée des sites web au Maroc et accompagne leur visibilité sur Google et les moteurs de recherche IA.
 
-## Services principaux
-- Création de sites web au Maroc
-- Sites vitrines
-- Sites e-commerce
-- SEO
-- GEO (Generative Engine Optimization)
-- AEO (Answer Engine Optimization)
-
-## Pages de référence
-- https://codaagency.co/creation-site-web-maroc/
-- https://codaagency.co/seo-geo-aeo/
-- https://codaagency.co/prix-site-web-maroc/
-
-## Zone desservie
-Maroc, notamment Casablanca, Tanger, Rabat, Marrakech et Agadir.
+## Pages principales
+- Accueil: https://amraniyasser.github.io/codaagency.co/
+- Création de site web au Maroc: https://amraniyasser.github.io/codaagency.co/creation-site-web-maroc/
+- Site vitrine: https://amraniyasser.github.io/codaagency.co/site-vitrine/
+- Site e-commerce: https://amraniyasser.github.io/codaagency.co/site-ecommerce/
+- Prix d’un site web au Maroc: https://amraniyasser.github.io/codaagency.co/prix-site-web-maroc/
+- SEO / GEO / AEO: https://amraniyasser.github.io/codaagency.co/seo-geo-aeo/
