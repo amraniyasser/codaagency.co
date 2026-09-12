@@ -1,11 +1,14 @@
 # Coda Agency
 
-Coda Agency crée des sites web au Maroc et accompagne leur visibilité sur Google et les moteurs de recherche IA.
+> Agence de création de sites web au Maroc, pour les entreprises de tous secteurs.
 
-## Pages principales
-- Accueil: https://amraniyasser.github.io/codaagency.co/
-- Création de site web au Maroc: https://amraniyasser.github.io/codaagency.co/creation-site-web-maroc/
-- Site vitrine: https://amraniyasser.github.io/codaagency.co/site-vitrine/
-- Site e-commerce: https://amraniyasser.github.io/codaagency.co/site-ecommerce/
-- Prix d’un site web au Maroc: https://amraniyasser.github.io/codaagency.co/prix-site-web-maroc/
-- SEO / GEO / AEO: https://amraniyasser.github.io/codaagency.co/seo-geo-aeo/
+## Site officiel
+- [Coda Agency](https://amraniyasser.github.io/codaagency.co/) : design, développement et référencement de sites web sur mesure.
+- [Notre approche](https://amraniyasser.github.io/codaagency.co/#approche)
+- [Parler d’un projet](https://amraniyasser.github.io/codaagency.co/#contact)
+
+## À propos
+Coda conçoit des expériences web adaptées à l’identité et aux besoins de chaque entreprise. Les bases SEO, GEO et AEO sont intégrées à la conception.
+
+## Concepts créatifs
+Maison Azur, Aura Botanique, Studio Élan et Tempo sont des marques fictives imaginées pour présenter des directions créatives. Elles ne constituent pas des références clients.

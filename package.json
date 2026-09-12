@@ -1,0 +1,27 @@
+{
+  "name": "coda-agency",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "next build --webpack && node scripts/publish-static.mjs",
+    "check": "tsc --noEmit",
+    "verify": "node scripts/verify-export.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "framer-motion": "13.2.0",
+    "geist": "^1.4.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0"
+  },
+  "engines": {"node": ">=22"}
+}

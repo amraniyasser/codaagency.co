@@ -1,1 +1,0 @@
-document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('#project-form');if(!form)return;form.addEventListener('submit',e=>{e.preventDefault();const note=document.querySelector('#form-note');note.textContent='Merci. Le formulaire est prêt côté interface ; il reste à connecter l’adresse de réception avant la mise en ligne définitive.';});});
