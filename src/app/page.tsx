@@ -1,4 +1,5 @@
-import { Header, HeroShowcase, ProjectGallery, ContactForm, MotionEnhancer } from "@/components/experience";
+import { HeroShowcase } from "@/components/hero-showcase";
+import { Header, ProjectGallery, ContactForm, MotionEnhancer } from "@/components/experience";
 import { Arrow } from "@/components/icons";
 import { asset, site, siteUrl } from "@/lib/site";
 
@@ -15,7 +16,7 @@ export default function Home() {
     <a href="#contenu" className="skip-link">Aller au contenu</a>
     <Header />
     <main id="contenu">
-      <section className="hero shell" aria-labelledby="hero-title">
+      <section className="hero hero-gallery shell" aria-labelledby="hero-title">
         <div className="hero-copy">
           <h1 id="hero-title"><span>Création de </span><span>sites web </span><span className="hero-final">au Maroc<span className="accent-dot">.</span></span></h1>
           <p>Votre entreprise a du caractère.<br />Votre site devrait en avoir autant.</p>

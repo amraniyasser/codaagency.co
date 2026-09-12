@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { asset, basePath, projects, makeProjectMessage, site } from "@/lib/site";
-import { Arrow, Close, Pause } from "./icons";
+import { Arrow, Close } from "./icons";
 import { Mockup } from "./mockup";
 
 export function Header() {
@@ -15,42 +15,6 @@ export function Header() {
     return () => window.removeEventListener("keydown", escape);
   }, [open]);
   return <header className="header shell"><a className="wordmark" href={`${basePath}/`} aria-label="Coda Agency, accueil"><img src={asset("logo/coda-agency.svg")} alt="Coda Agency" width="192" height="55" /></a><nav className="desktop-nav" aria-label="Navigation principale"><a href="#univers">Nos univers</a><a href="#approche">Notre approche</a></nav><a className="header-contact" href="#contact">Un projet en tête ? <span><Arrow diagonal /></span></a><button className="menu-button" ref={menuButton} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}>{open ? <Close /> : <span className="menu-lines" />}</button><nav id="mobile-menu" aria-label="Navigation mobile" className={`mobile-nav ${open ? "open" : ""}`} hidden={!open}><a href="#univers" onClick={() => setOpen(false)}>Nos univers <Arrow /></a><a href="#approche" onClick={() => setOpen(false)}>Notre approche <Arrow /></a><a href="#contact" onClick={() => setOpen(false)}>Parler de votre projet <Arrow diagonal /></a></nav></header>;
-}
-
-export function HeroShowcase() {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [reduced, setReduced] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [hovered, setHovered] = useState(false);
-  const [focused, setFocused] = useState(false);
-  const region = useRef<HTMLDivElement>(null);
-  const stopped = paused || reduced || !visible || hovered || focused;
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sync = () => setReduced(media.matches);
-    sync(); media.addEventListener("change", sync);
-    const node = region.current;
-    let inView = true;
-    const update = () => setVisible(inView && !document.hidden);
-    const observer = new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; update(); });
-    if (node) observer.observe(node);
-    document.addEventListener("visibilitychange", update);
-    return () => { media.removeEventListener("change", sync); observer.disconnect(); document.removeEventListener("visibilitychange", update); };
-  }, []);
-  useEffect(() => {
-    if (stopped) return;
-    const timer = window.setInterval(() => setActive(index => (index + 1) % projects.length), 8500);
-    return () => window.clearInterval(timer);
-  }, [stopped, active]);
-  const select = (index: number) => { setActive(index); setPaused(true); };
-  return <div className="hero-showcase" ref={region} role="region" aria-roledescription="carrousel" aria-label="Concepts de sites imaginés par Coda" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocus={() => setFocused(true)} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
-    <div className="showcase-surface" style={{background: projects[active].color}}>
-      <div className="showcase-browser"><div className="browser-bar"><span className="browser-dots"><i /><i /><i /></span><span>Imaginé par Coda</span><span className="browser-expand">↗</span></div><div className="showcase-slides">{projects.map((project,index) => <div className={`showcase-slide ${active === index ? "active" : ""}`} key={project.id} aria-hidden={active !== index}><Mockup id={project.id} priority={index === 0} /></div>)}</div></div>
-      <div className="showcase-floating-label"><span className="label-mark">c.</span><span>Votre prochaine<br /><strong>première impression.</strong></span><Arrow diagonal /></div>
-    </div>
-    <div className="showcase-caption"><div aria-live={paused ? "polite" : "off"}><strong>{projects[active].name}</strong><span>{projects[active].sector}</span></div><div className="carousel-controls"><div className="carousel-dots">{projects.map((p,i) => <button key={p.id} aria-label={`Voir le concept ${p.name}`} aria-pressed={active===i} onClick={() => select(i)}><span /></button>)}</div><button className="pause-button" aria-label={paused ? "Lancer le défilement automatique" : "Mettre le défilement en pause"} aria-pressed={paused} onClick={() => setPaused(!paused)} disabled={reduced}><Pause paused={paused || reduced} /></button></div></div>
-  </div>;
 }
 
 export function ProjectGallery() {

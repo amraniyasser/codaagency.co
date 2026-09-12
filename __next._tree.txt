@@ -1,3 +1,3 @@
 :HL["/codaagency.co/_next/static/media/0b78ff376f6b9734-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/codaagency.co/_next/static/css/63ccbafa009fa9b4.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"HEzEFb801H596V1jkA6ml"}
+:HL["/codaagency.co/_next/static/css/00fa3954b0b64ddc.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"CkIU1OVYJPtHMwxbAP8sR"}
