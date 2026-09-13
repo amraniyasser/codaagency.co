@@ -126,67 +126,60 @@
 
     /* 4. HERO INTRO */
     .hero-intro {
-      padding-top: clamp(34px, 5vw, 72px);
-      padding-bottom: clamp(42px, 6vw, 84px);
+      padding-top: clamp(10px, 1.6vw, 24px);
+      padding-bottom: 14px;
+      text-align: center;
     }
 
     .hero-intro h1 {
       margin: 0;
-      font-size: clamp(58px, 7vw, 108px);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
+      font-size: clamp(54px, 6.4vw, 98px);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
       font-weight: 700;
       white-space: nowrap;
     }
 
     .hero-intro p {
-      margin: 26px 0 0;
-      max-width: 760px;
-      font-size: clamp(18px, 1.7vw, 24px);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
+      margin: 18px auto 0;
+      max-width: none;
+      font-size: clamp(15px, 1.25vw, 19px);
+      line-height: 1.35;
+      letter-spacing: -0.015em;
       color: var(--muted);
+      white-space: nowrap;
     }
 
     /* 5. RADIAL WORK SLIDER */
     .work-scroll {
       position: relative;
-      height: 360vh;
+      height: 340vh;
+      margin-top: 0;
     }
 
     .work-stage {
       position: sticky;
       top: 0;
       height: 100vh;
-      min-height: 720px;
+      min-height: 680px;
       overflow: hidden;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-    }
-
-    .work-stage::before {
-      content: "";
-      position: absolute;
-      inset: 8% var(--gutter) 7%;
-      border-radius: 44px;
-      background:
-        radial-gradient(circle at 50% 45%, rgba(0,102,204,0.08), transparent 34%),
-        var(--surface);
-      border: 1px solid var(--border);
+      padding-top: 12px;
     }
 
     .radial-slider {
       position: relative;
-      width: min(1120px, calc(100vw - (var(--gutter) * 2)));
-      height: min(700px, 76vh);
+      width: min(1180px, calc(100vw - (var(--gutter) * 2)));
+      height: min(690px, 78vh);
       z-index: 1;
     }
 
     .radial-card {
       position: absolute;
       left: 50%;
-      top: 49%;
+      top: 45%;
       width: clamp(300px, 35vw, 520px);
       aspect-ratio: 1.5 / 1;
       border-radius: 30px;
@@ -206,7 +199,7 @@
     .slider-ui {
       position: absolute;
       left: 50%;
-      bottom: 10.5%;
+      bottom: 7%;
       transform: translateX(-50%);
       z-index: 3;
       display: flex;
@@ -252,7 +245,8 @@
         --nav-h: 80px;
       }
 
-      .hero-intro h1 {
+      .hero-intro h1,
+      .hero-intro p {
         white-space: normal;
       }
 
@@ -261,7 +255,7 @@
       }
 
       .work-stage {
-        min-height: 640px;
+        min-height: 620px;
       }
 
       .radial-slider {
@@ -294,17 +288,17 @@
       }
 
       .hero-intro {
-        padding-top: 28px;
-        padding-bottom: 38px;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
 
       .hero-intro h1 {
-        font-size: clamp(44px, 13vw, 68px);
+        font-size: clamp(42px, 12vw, 64px);
       }
 
       .hero-intro p {
-        margin-top: 20px;
-        font-size: 17px;
+        margin-top: 14px;
+        font-size: 15px;
       }
 
       .work-scroll {
@@ -312,12 +306,8 @@
       }
 
       .work-stage {
-        min-height: 580px;
-      }
-
-      .work-stage::before {
-        inset: 6% 14px 5%;
-        border-radius: 30px;
+        min-height: 560px;
+        padding-top: 4px;
       }
 
       .radial-slider {
@@ -331,7 +321,7 @@
       }
 
       .slider-ui {
-        bottom: 8%;
+        bottom: 6%;
       }
     }
 
@@ -399,10 +389,8 @@
       const indexLabel = document.querySelector('.slider-index');
       const count = cards.length;
 
-      let manualIndex = 0;
       let scrollIndex = 0;
       let activeIndex = 0;
-      let lastScrollY = window.scrollY;
       let scrollTimer;
       let isScrolling = false;
 
@@ -410,7 +398,6 @@
 
       function setActive(index, smooth = true) {
         activeIndex = ((index % count) + count) % count;
-        manualIndex = activeIndex;
 
         cards.forEach((card, i) => {
           let offset = i - activeIndex;
@@ -445,8 +432,7 @@
         const rect = section.getBoundingClientRect();
         const scrollable = section.offsetHeight - window.innerHeight;
         const progress = clamp(-rect.top / scrollable, 0, 1);
-        const raw = progress * (count - 1);
-        const nextIndex = Math.round(raw);
+        const nextIndex = Math.round(progress * (count - 1));
 
         if (nextIndex !== scrollIndex) {
           scrollIndex = nextIndex;
@@ -456,7 +442,6 @@
 
       window.addEventListener('scroll', () => {
         isScrolling = true;
-        lastScrollY = window.scrollY;
         updateFromScroll();
 
         clearTimeout(scrollTimer);
@@ -468,10 +453,6 @@
       nextButton.addEventListener('click', () => {
         const next = (activeIndex + 1) % count;
         setActive(next, true);
-
-        if (!isScrolling) {
-          manualIndex = next;
-        }
       });
 
       window.addEventListener('resize', () => setActive(activeIndex, false));
