@@ -1,0 +1,1 @@
+Approved hero reference asset is rendered via CSS background fallback until binary upload is finalized.
