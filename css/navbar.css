@@ -22,24 +22,14 @@
 
 .site-nav__brand {
   display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
-  color: var(--color-text-primary);
-  white-space: nowrap;
+  align-items: center;
+  flex: 0 0 auto;
 }
 
-.site-nav__brand-coda {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: -0.055em;
-}
-
-.site-nav__brand-agency {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+.site-nav__brand-mark {
+  display: block;
+  width: 218px;
+  height: auto;
 }
 
 .site-nav__actions {
@@ -98,12 +88,8 @@
     width: calc(100% - 48px);
   }
 
-  .site-nav__brand-coda {
-    font-size: 38px;
-  }
-
-  .site-nav__brand-agency {
-    font-size: 23px;
+  .site-nav__brand-mark {
+    width: 174px;
   }
 
   .site-nav__actions {
@@ -124,16 +110,8 @@
     width: calc(100% - 32px);
   }
 
-  .site-nav__brand {
-    gap: 5px;
-  }
-
-  .site-nav__brand-coda {
-    font-size: 31px;
-  }
-
-  .site-nav__brand-agency {
-    font-size: 18px;
+  .site-nav__brand-mark {
+    width: 138px;
   }
 
   .site-nav__link {
