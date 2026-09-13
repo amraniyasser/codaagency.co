@@ -1,0 +1,38 @@
+:root {
+  /* Colors */
+  --bg-main: #E4DFD8;
+  --bg-secondary: #D0CAC2;
+  --surface-accent: #B7B1A8;
+  --dark-main: #111111;
+  --text-main: #0B0B0B;
+  --text-secondary: #4B5B66;
+  --text-on-dark: #F5F2EE;
+  --border-light: rgba(11, 11, 11, 0.12);
+  --border-dark: rgba(255, 255, 255, 0.16);
+
+  /* Typography */
+  --font-sans: "General Sans", Arial, sans-serif;
+
+  --font-h1: clamp(64px, 7vw, 120px);
+  --font-h2: clamp(40px, 5vw, 72px);
+  --font-h3: clamp(28px, 3vw, 44px);
+  --font-body-lg: 20px;
+  --font-body: 16px;
+  --font-small: 14px;
+  --font-label: 12px;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --lh-h1: 0.95;
+  --lh-h2: 1.1;
+  --lh-h3: 1.2;
+  --lh-body: 1.6;
+  --lh-small: 1.5;
+
+  --tracking-h1: -0.02em;
+  --tracking-h2: -0.01em;
+  --tracking-label: 0.08em;
+}
