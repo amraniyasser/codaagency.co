@@ -16,7 +16,7 @@
       --accent: #0066cc;
       --border: rgba(29, 29, 31, 0.10);
       --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-      --gutter: clamp(48px, 8vw, 140px);
+      --gutter: clamp(48px, 5vw, 96px);
       --max: 1440px;
       --nav-h: 88px;
       --radius-pill: 999px;
@@ -48,7 +48,8 @@
     }
 
     .inner {
-      width: min(calc(100% - (var(--gutter) * 2)), var(--max));
+      width: 100%;
+      padding-inline: var(--gutter);
       margin-inline: auto;
     }
 
