@@ -1,5 +1,5 @@
 :root {
-  /* Colors */
+  /* Colors — validated Coda palette */
   --bg-main: #E4DFD8;
   --bg-secondary: #D0CAC2;
   --surface-accent: #B7B1A8;
@@ -18,7 +18,7 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-inverse: var(--text-on-dark);
 
-  /* Typography */
+  /* Typography — validated: General Sans */
   --font-sans: "General Sans", Arial, sans-serif;
   --font-family-sans: var(--font-sans);
 
@@ -29,7 +29,6 @@
   --font-body: 16px;
   --font-small: 14px;
   --font-label: 12px;
-
   --font-size-md: var(--font-body);
 
   --weight-regular: 400;
@@ -38,13 +37,15 @@
   --weight-bold: 700;
 
   --font-weight-regular: var(--weight-regular);
+  --font-weight-medium: var(--weight-medium);
+  --font-weight-semibold: var(--weight-semibold);
+  --font-weight-bold: var(--weight-bold);
 
   --lh-h1: 0.95;
   --lh-h2: 1.1;
   --lh-h3: 1.2;
   --lh-body: 1.6;
   --lh-small: 1.5;
-
   --line-height-body: var(--lh-body);
 
   --tracking-h1: -0.02em;
@@ -65,12 +66,15 @@
   --section-dark-bg: var(--dark-main);
   --section-dark-text: var(--text-on-dark);
 
-  /* Motion — restrained, editorial, premium */
+  /* Motion */
   --motion-fast: 180ms;
   --motion-base: 320ms;
   --motion-slow: 650ms;
   --motion-reveal: 900ms;
   --motion-stagger: 90ms;
+  --duration-fast: var(--motion-fast);
+  --duration-medium: var(--motion-base);
+  --duration-slow: var(--motion-slow);
 
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
