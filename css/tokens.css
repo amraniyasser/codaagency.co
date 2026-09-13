@@ -10,8 +10,17 @@
   --border-light: rgba(11, 11, 11, 0.12);
   --border-dark: rgba(255, 255, 255, 0.16);
 
+  /* Semantic color aliases */
+  --color-bg-main: var(--bg-main);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-dark: var(--dark-main);
+  --color-text-primary: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-inverse: var(--text-on-dark);
+
   /* Typography */
   --font-sans: "General Sans", Arial, sans-serif;
+  --font-family-sans: var(--font-sans);
 
   --font-h1: clamp(64px, 7vw, 120px);
   --font-h2: clamp(40px, 5vw, 72px);
@@ -21,10 +30,14 @@
   --font-small: 14px;
   --font-label: 12px;
 
+  --font-size-md: var(--font-body);
+
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
+
+  --font-weight-regular: var(--weight-regular);
 
   --lh-h1: 0.95;
   --lh-h2: 1.1;
@@ -32,7 +45,34 @@
   --lh-body: 1.6;
   --lh-small: 1.5;
 
+  --line-height-body: var(--lh-body);
+
   --tracking-h1: -0.02em;
   --tracking-h2: -0.01em;
   --tracking-label: 0.08em;
+
+  /* Layout */
+  --container-max: 1440px;
+  --container-gutter: clamp(24px, 4vw, 64px);
+  --section-padding-y: clamp(88px, 10vw, 160px);
+
+  --section-light-bg: var(--bg-main);
+  --section-light-text: var(--text-main);
+  --section-soft-bg: var(--bg-secondary);
+  --section-soft-text: var(--text-main);
+  --section-accent-bg: var(--surface-accent);
+  --section-accent-text: var(--text-main);
+  --section-dark-bg: var(--dark-main);
+  --section-dark-text: var(--text-on-dark);
+
+  /* Motion — restrained, editorial, premium */
+  --motion-fast: 180ms;
+  --motion-base: 320ms;
+  --motion-slow: 650ms;
+  --motion-reveal: 900ms;
+  --motion-stagger: 90ms;
+
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 }
