@@ -1,124 +1,135 @@
-/* Coda Agency — Navbar matched to approved reference */
+/* Coda Agency — Navbar matched closely to approved reference */
 
 .site-nav {
   position: relative;
   z-index: 50;
   width: 100%;
-  padding-block: 24px;
+  padding: 27px 0 0;
+}
+
+.site-nav .container.site-nav__inner {
+  width: calc(100% - 104px);
+  max-width: none;
+  margin-inline: auto;
 }
 
 .site-nav__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  min-height: 52px;
 }
 
 .site-nav__brand {
   display: inline-flex;
   align-items: baseline;
-  gap: 6px;
+  gap: 7px;
   color: var(--color-text-primary);
   white-space: nowrap;
 }
 
 .site-nav__brand-coda {
-  font-size: clamp(40px, 3.45vw, 50px);
-  font-weight: var(--font-weight-bold);
-  line-height: 0.95;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 0.9;
   letter-spacing: -0.055em;
 }
 
 .site-nav__brand-agency {
-  font-size: clamp(24px, 2.05vw, 29px);
-  font-weight: var(--font-weight-regular);
-  line-height: 1;
-  letter-spacing: -0.04em;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
 }
 
 .site-nav__actions {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
 }
 
 .site-nav__link {
   display: inline-flex;
   align-items: center;
   color: var(--color-text-primary);
-  font-size: 16px;
-  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .site-nav__cta {
+  width: 208px;
+  height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  min-width: 218px;
-  min-height: 54px;
-  padding-inline: 24px;
+  gap: 15px;
+  padding: 0 21px;
   border-radius: 999px;
-  background: var(--color-bg-dark);
-  color: var(--color-text-inverse);
-  font-size: 15px;
-  font-weight: var(--font-weight-medium);
+  background: #111111;
+  color: #F5F2EE;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   white-space: nowrap;
-  transition: background-color var(--motion-fast) ease;
 }
 
 .site-nav__cta-arrow {
   display: inline-block;
-  font-size: 15px;
+  margin-left: auto;
+  font-size: 14px;
   line-height: 1;
 }
 
 .site-nav__cta:hover,
 .site-nav__cta:focus-visible {
-  background: #1a1a1a;
+  background: #111111;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .site-nav {
-    padding-block: 18px;
+    padding-top: 22px;
   }
 
-  .site-nav__inner {
-    gap: 18px;
-  }
-
-  .site-nav__actions {
-    gap: 16px;
+  .site-nav .container.site-nav__inner {
+    width: calc(100% - 48px);
   }
 
   .site-nav__brand-coda {
-    font-size: 34px;
+    font-size: 38px;
   }
 
   .site-nav__brand-agency {
-    font-size: 20px;
+    font-size: 23px;
   }
 
-  .site-nav__link {
-    font-size: 13px;
+  .site-nav__actions {
+    gap: 18px;
   }
 
   .site-nav__cta {
-    min-width: 0;
-    min-height: 46px;
-    padding-inline: 17px;
-    font-size: 12px;
-    gap: 10px;
+    width: auto;
+    min-width: 178px;
+    height: 48px;
+    padding-inline: 18px;
+    font-size: 13px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 620px) {
+  .site-nav .container.site-nav__inner {
+    width: calc(100% - 32px);
+  }
+
+  .site-nav__brand {
+    gap: 5px;
+  }
+
   .site-nav__brand-coda {
-    font-size: 30px;
+    font-size: 31px;
   }
 
   .site-nav__brand-agency {
@@ -130,8 +141,16 @@
   }
 
   .site-nav__cta {
-    min-height: 42px;
+    min-width: 0;
+    width: auto;
+    height: 42px;
     padding-inline: 14px;
+    font-size: 11px;
+    gap: 10px;
+  }
+
+  .site-nav__cta-arrow {
+    margin-left: 0;
     font-size: 11px;
   }
 }
